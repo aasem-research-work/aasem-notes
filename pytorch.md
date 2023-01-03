@@ -6,6 +6,7 @@
   3. conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
   4. conda install -c conda-forge jupyterlab 
   5. conda install matplotlib
+  6. pip install tqdm
 
 ## by script
 ```bash   
@@ -17,6 +18,7 @@ conda activate torch
 conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia 
 conda install -c conda-forge jupyterlab
 conda install matplotlib
+pip install tqdm
 
 # Disable yes to all
 unset CONDA_ALWAYS_YES  
