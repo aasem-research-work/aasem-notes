@@ -5,8 +5,9 @@
   2. conda activate torch
   3. conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
   4. conda install -c conda-forge jupyterlab 
-  5. conda install matplotlib
-  6. pip install tqdm
+  5. conda install -c conda-forge ipywidgets -y
+  6. conda install matplotlib
+  7. pip install tqdm
 
 ## by script
 ```bash   
@@ -17,6 +18,7 @@ conda create -n torch python=3.7
 conda activate torch
 conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia 
 conda install -c conda-forge jupyterlab
+conda install -c conda-forge ipywidgets 
 conda install matplotlib
 pip install tqdm
 
