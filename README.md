@@ -59,6 +59,27 @@ Describe the high-level overview of the Hotel Management Software system.
   5. Human resources (HR) functionalities, such as managing employee profiles and tracking leave requests, should be available.
 
 (Continue with additional functional requirements as needed.)
+### Functional Requirement: Reservation Management
+
+```mermaid
+@startuml
+!define ReservationSystem <<System>>
+!define User <<User>>
+
+User --> (Make Reservation)
+User --> (Modify Reservation)
+User --> (Cancel Reservation)
+(Make Reservation) --> (Check Room Availability)
+(Make Reservation) --> (Select Room Type)
+(Make Reservation) --> (Specify Guest Details)
+(Modify Reservation) --> (View Existing Booking)
+(Modify Reservation) --> (Update Booking Details)
+(Cancel Reservation) --> (View Existing Booking)
+(Cancel Reservation) --> (Confirm Cancellation)
+ReservationSystem --> (Send Confirmation Email)
+ReservationSystem --> (Record Reservation Details)
+
+@enduml
 
 
 ## 4. Non-Functional Requirements
