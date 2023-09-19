@@ -80,8 +80,78 @@ sequenceDiagram
     Receptionist ->> System: Send Confirmation Email
 
 
-```
+```mermaid
 
+
+classDiagram
+
+    class Guest {
+        +guestID: String
+        +name: String
+        +email: String
+        +phoneNumber: String
+        +makeReservation()
+        +modifyReservation()
+        +cancelReservation()
+    }
+
+    class Room {
+        +roomNumber: String
+        +roomType: String
+        +price: Double
+        +isAvailable: Boolean
+        +checkAvailability()
+        +reserve()
+        +release()
+    }
+
+    class Receptionist {
+        +employeeID: String
+        +name: String
+        +shift: String
+        +createReservation()
+        +modifyReservation()
+        +cancelReservation()
+        +sendConfirmationEmail()
+    }
+
+    class Reservation {
+        +reservationID: String
+        +guestID: String
+        +roomNumber: String
+        +startDate: Date
+        +endDate: Date
+        +create()
+        +modify()
+        +cancel()
+    }
+
+    class HotelManagementSystem {
+        +listOfRooms: Array
+        +listOfReservations: Array
+        +listOfGuests: Array
+        +listOfEmployees: Array
+        +checkRoomAvailability()
+        +createReservation()
+        +modifyReservation()
+        +cancelReservation()
+        +sendConfirmationEmail()
+    }
+
+    class EmailService {
+        +smtpSettings: String
+        +emailAddress: String
+        +sendEmail()
+    }
+
+    Guest -- Receptionist: interacts with
+    Receptionist -- HotelManagementSystem: uses
+    HotelManagementSystem -- Room: manages
+    HotelManagementSystem -- Reservation: manages
+    Receptionist -- EmailService: uses
+    Reservation -- Room: associated with
+    Reservation -- Guest: associated with
+```
 ## 4. Non-Functional Requirements
 List and describe the non-functional requirements of the system, including performance, security, and usability.
 
