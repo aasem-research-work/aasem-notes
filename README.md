@@ -62,32 +62,7 @@ Describe the high-level overview of the Hotel Management Software system.
 ### Functional Requirement: Reservation Management
 
 ```mermaid
-@startuml
-!define ReservationSystem <<System>>
-!define User <<User>>
 
-User --> (Make Reservation)
-User --> (Modify Reservation)
-User --> (Cancel Reservation)
-(Make Reservation) --> (Check Room Availability)
-(Make Reservation) --> (Select Room Type)
-(Make Reservation) --> (Specify Guest Details)
-(Modify Reservation) --> (View Existing Booking)
-(Modify Reservation) --> (Update Booking Details)
-(Cancel Reservation) --> (View Existing Booking)
-(Cancel Reservation) --> (Confirm Cancellation)
-ReservationSystem --> (Send Confirmation Email)
-ReservationSystem --> (Record Reservation Details)
-
-@enduml
-```
-
-# Hotel Management Software - Design Document
-
-## Functional Requirement: Reservation Management (FR-001)
-
-### Sequence Diagram
-```mermaid
 sequenceDiagram
     participant User as "Guest"
     participant Receptionist as "Receptionist"
@@ -95,14 +70,15 @@ sequenceDiagram
 
     User ->> Receptionist: Request to Make Reservation
     Receptionist ->> System: Check Room Availability
-    System -->> Receptionist: Room Availability
+    System -->> Receptionist: Room Availability Status
     Receptionist ->> System: Create Reservation
-    System -->> Receptionist: Confirmation
+    System -->> Receptionist: Reservation Confirmation
     Receptionist ->> System: Modify Reservation
     System -->> Receptionist: Modification Confirmation
     Receptionist ->> System: Cancel Reservation
     System -->> Receptionist: Cancellation Confirmation
     Receptionist ->> System: Send Confirmation Email
+
 
 ```
 
