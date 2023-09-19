@@ -29,14 +29,37 @@ This system will cover reservation management, expense tracking, staff managemen
 Describe the high-level overview of the Hotel Management Software system.
 
 ## 3. Functional Requirements
-List and describe the functional requirements of the system. Use a table format like the one below for each requirement.
+### 3. Functional Requirements
 
-| Requirement ID | Requirement Description |
-|----------------|-------------------------|
-| FR-001         | Reservation management allows users to check room availability, make reservations, and modify or cancel bookings. |
-| FR-002         | Expense tracking includes the ability to categorize expenses, generate reports, and integrate with external accounting software. |
+#### FR-001: Reservation Management
+- **Description:** The system should provide a user-friendly interface for managing room reservations.
+- **Detailed Requirements:**
+  1. Users must be able to check room availability for specific dates.
+  2. Users should be able to make room reservations, including selecting room types and specifying the number of guests.
+  3. The system should allow users to modify or cancel existing bookings.
+  4. Confirmation emails should be sent to users upon successful reservations.
+  5. Reservation records must include guest details, check-in, and check-out dates.
 
-(Continue listing all functional requirements.)
+#### FR-002: Expense Tracking
+- **Description:** The system should integrate with accounting software for expense management.
+- **Detailed Requirements:**
+  1. The system must support the categorization of expenses into predefined expense types (e.g., utilities, maintenance, payroll).
+  2. Users should be able to input and track expenses, including the date, amount, and description.
+  3. Expense reports must be generated, allowing users to view expenses within a specified time frame and by expense type.
+  4. Integration with external accounting software should be seamless to ensure accurate financial records.
+  5. The system must support the automatic calculation of total expenses.
+
+#### FR-003: Staff Management
+- **Description:** The system should provide tools for efficient staff management.
+- **Detailed Requirements:**
+  1. The system must support employee scheduling, allowing managers to create and update staff work schedules.
+  2. Staff members should be able to clock in and out using the system, with attendance records automatically recorded.
+  3. Role-based access control must be implemented to ensure data security and restrict access to sensitive information.
+  4. Payroll processing functionality should calculate employee salaries based on worked hours and rates.
+  5. Human resources (HR) functionalities, such as managing employee profiles and tracking leave requests, should be available.
+
+(Continue with additional functional requirements as needed.)
+
 
 ## 4. Non-Functional Requirements
 List and describe the non-functional requirements of the system, including performance, security, and usability.
