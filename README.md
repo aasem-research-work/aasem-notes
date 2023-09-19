@@ -80,7 +80,31 @@ ReservationSystem --> (Send Confirmation Email)
 ReservationSystem --> (Record Reservation Details)
 
 @enduml
+```
 
+# Hotel Management Software - Design Document
+
+## Functional Requirement: Reservation Management (FR-001)
+
+### Sequence Diagram
+```mermaid
+sequenceDiagram
+    participant User as "Guest"
+    participant Receptionist as "Receptionist"
+    participant System as "Hotel Management System"
+
+    User ->> Receptionist: Request to Make Reservation
+    Receptionist ->> System: Check Room Availability
+    System -->> Receptionist: Room Availability
+    Receptionist ->> System: Create Reservation
+    System -->> Receptionist: Confirmation
+    Receptionist ->> System: Modify Reservation
+    System -->> Receptionist: Modification Confirmation
+    Receptionist ->> System: Cancel Reservation
+    System -->> Receptionist: Cancellation Confirmation
+    Receptionist ->> System: Send Confirmation Email
+
+```
 
 ## 4. Non-Functional Requirements
 List and describe the non-functional requirements of the system, including performance, security, and usability.
